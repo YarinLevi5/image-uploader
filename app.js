@@ -1,11 +1,13 @@
 let inputUpld = document.querySelector('#imgUpload');
 let uploaded = document.querySelector('.uploaded-img');
+let errMsg = document.querySelector('.errMsg');
 inputUpld.addEventListener('change', () => {
     let file = inputUpld.files[0];
     if (validFileType(file)) {
         uploaded.src = URL.createObjectURL(inputUpld.files[0]);
+        errMsg.classList.add('hide');
     } else {
-        console.log("not img");
+        errMsg.classList.remove('hide');
     }
 });
 

@@ -39,12 +39,21 @@ p {
     line-height: 1.4;
 }
 
+.uploader .errMsg {
+    color: red;
+    font-weight: 600;
+}
+
+.hide {
+    display: none;
+}
+
 .dragger {
     position: relative;
     border-radius: 12px;
     background-color: #f6f8fb;
     width: 338px;
-    height: 218.9px;
+    height: 190px;
     border: dashed 1px #97bef4;
     top: 10px;
     left: 32px;
@@ -56,7 +65,7 @@ img {
 }
 
 .option {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 button,
@@ -67,11 +76,12 @@ button,
     border-radius: 8px;
     border: none;
     padding: 8px;
-    font-weight: 550;
+    font-weight: 500;
 }
 
 .imgUpldBtn {
-    margin-top: 25px;
+    margin-top: 20px;
+    height: 45px;
 }
 
 .imgUpldBtn input {
