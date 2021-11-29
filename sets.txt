@@ -1,3 +1,0 @@
-background color = #FAFAFB
-frame background color = #FFFFFF
-drag area background color = #F6F8FB
