@@ -17,12 +17,16 @@
         <div class="uploader">
             <h1>Upload your image</h1>
             <p>File should be Jpeg, Png, etc.</p>
+            <p>* Not a valid file type,Update your selection.</p>
             <div class="dragger">
                 <img src="image-uploader-master/image.svg" alt="image template">
                 <p>Drag & Drop your image here</p>
             </div>
             <p class="option">Or</p>
-            <button>Choose a file</button>
+            <div class="imgUpldBtn">
+                <label for="imgUpload">Choose a file</label>
+                <input type="file" accept="image/*" id="imgUpload">
+            </div>
         </div>
         <div class="uploading">
             <h1>Uploading...</h1>
@@ -34,13 +38,14 @@
             <img src="v_sign.png" alt="v sign" class="vChecked">
             <h1>Uploaded Successfully!
             </h1>
-            <img src="image-uploader-master/image.svg" alt="uploaded image" class="uploaded-img">
+            <img src="" alt="uploaded image" class="uploaded-img">
             <div class="link">
                 <p>https://egebndjndejnk.com</p>
                 <button class="copy">Copy Link</button>
             </div>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
