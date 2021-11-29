@@ -11,8 +11,6 @@ inputUpld.addEventListener('change', () => {
     }
 });
 
-
-
 const fileTypes = [
     "image/apng",
     "image/bmp",
