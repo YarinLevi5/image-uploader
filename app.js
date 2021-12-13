@@ -1,7 +1,9 @@
 let inputUpld = document.querySelector('#imgUpload');
 let uploaded = document.querySelector('.uploaded-img');
 let errMsg = document.querySelector('.errMsg');
-inputUpld.addEventListener('change', () => {
+let dragger = document.querySelector('.dragger');
+
+function upload() {
     let file = inputUpld.files[0];
     if (validFileType(file)) {
         uploaded.src = URL.createObjectURL(inputUpld.files[0]);
@@ -9,6 +11,13 @@ inputUpld.addEventListener('change', () => {
     } else {
         errMsg.classList.remove('hide');
     }
+}
+inputUpld.addEventListener('change', upload);
+
+dragger.addEventListener('drop', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    upload();
 });
 
 const fileTypes = [
