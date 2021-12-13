@@ -3,7 +3,7 @@ let uploaded = document.querySelector('.uploaded-img');
 let errMsg = document.querySelector('.errMsg');
 let dragger = document.querySelector('.dragger');
 
-function upload() {
+inputUpld.addEventListener('change', () => {
     let file = inputUpld.files[0];
     if (validFileType(file)) {
         uploaded.src = URL.createObjectURL(inputUpld.files[0]);
@@ -11,14 +11,18 @@ function upload() {
     } else {
         errMsg.classList.remove('hide');
     }
-}
-inputUpld.addEventListener('change', upload);
-
-dragger.addEventListener('drop', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    upload();
 });
+
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    console.log(ev);
+}
+
 
 const fileTypes = [
     "image/apng",

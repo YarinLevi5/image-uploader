@@ -18,7 +18,7 @@
             <h1>Upload your image</h1>
             <p>File should be Jpeg, Png, etc.</p>
             <p class="errMsg hide">* Not a valid file type,Update your selection.</p>
-            <div class="dragger">
+            <div class="dragger" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img src="image-uploader-master/image.svg" alt="image template">
                 <p>Drag & Drop your image here</p>
             </div>
