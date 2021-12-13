@@ -1,3 +1,2 @@
 # add transitions
-# add drop area(make arow function in eventListener)
-# add timeout for loading(depend on filesize - show its progress time changes linear)
+# add timeout for loading(depend on filesize - show its progress time changes linear)- animation

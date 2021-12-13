@@ -3,16 +3,19 @@ let uploaded = document.querySelector('.uploaded-img');
 let errMsg = document.querySelector('.errMsg');
 let dragger = document.querySelector('.dragger');
 
-inputUpld.addEventListener('change', () => {
-    let file = inputUpld.files[0];
+function upload(file) {
     if (validFileType(file)) {
-        uploaded.src = URL.createObjectURL(inputUpld.files[0]);
+        uploaded.src = URL.createObjectURL(file);
         errMsg.classList.add('hide');
     } else {
         errMsg.classList.remove('hide');
     }
-});
+};
 
+inputUpld.addEventListener('change', () => {
+    let file = inputUpld.files[0];
+    upload(file);
+})
 
 function allowDrop(ev) {
     ev.preventDefault();
@@ -20,9 +23,9 @@ function allowDrop(ev) {
 
 function drop(ev) {
     ev.preventDefault();
-    console.log(ev);
+    let file = ev.dataTransfer.files[0];
+    upload(file);
 }
-
 
 const fileTypes = [
     "image/apng",
