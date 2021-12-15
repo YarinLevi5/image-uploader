@@ -1,2 +1,0 @@
-# add transitions
-# add timeout for loading(depend on filesize - show its progress time changes linear)- animation
