@@ -1,12 +1,22 @@
 let inputUpld = document.querySelector('#imgUpload');
-let uploaded = document.querySelector('.uploaded-img');
+let uploadedImg = document.querySelector('.uploaded-img');
 let errMsg = document.querySelector('.errMsg');
 let dragger = document.querySelector('.dragger');
+let uploader = document.querySelector('.uploader');
+let uploading = document.querySelector('.uploading');
+let uploaded = document.querySelector('.uploaded');
 
 function upload(file) {
     if (validFileType(file)) {
-        uploaded.src = URL.createObjectURL(file);
+        uploader.classList.add('hide');
+        uploading.classList.remove('hide');
         errMsg.classList.add('hide');
+        setTimeout(() => {
+            uploading.classList.add('hide');
+            uploaded.classList.remove('hide');
+            uploadedImg.src = URL.createObjectURL(file);
+        }, 4000);
+
     } else {
         errMsg.classList.remove('hide');
     }

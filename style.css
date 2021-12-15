@@ -94,7 +94,6 @@ button,
     height: 143.57px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    display: none;
 }
 
 .uploading h1 {
@@ -118,6 +117,17 @@ button,
     border-radius: 8px;
     background-color: #2F80ED;
     margin-left: 32px;
+    animation: runner 2s infinite linear;
+}
+
+@keyframes runner {
+    0% {
+        transform: translate(-35px);
+    }
+
+    100% {
+        transform: translate(210px);
+    }
 }
 
 .uploaded {
