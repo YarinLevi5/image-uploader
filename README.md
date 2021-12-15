@@ -15,8 +15,8 @@ When the image is uploaded, you will see the image.
 2. CSS
 3. Javascript 
 
-## Contact
->Yarin Levi, https://github.com/YarinLevi5
->Raz Duchan, https://github.com/razdu
+## Contacts
+*Yarin Levi- https://github.com/YarinLevi5
+*Raz Duchan- https://github.com/razdu
 
 **Give a ⭐️ if you like this project!**
